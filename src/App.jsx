@@ -18,7 +18,7 @@ const App = () => {
       <h1>Job Details</h1>
       <ul>
         {apiData.map((job, id) => {
-          return <JobCard key={job.jobRole + id} job={job} />;
+          return <JobCard key={job.jdUid} job={job} />;
         })}
       </ul>
     </div>
