@@ -1,6 +1,8 @@
 import React from "react";
-import JobCard from "./components/JobCard";
+import JobCard from "./components/JobCard/JobCard";
 import { useApi } from "./context/ApiProvider";
+import "./components/JobCard/JobCard.css";
+import "./index.css"
 
 const App = () => {
   const { apiData, loading, error } = useApi();
@@ -14,13 +16,13 @@ const App = () => {
   }
 
   return (
-    <div>
+    <div className="ProjectParent">
       <h1>Job Details</h1>
-      <ul>
+      <div className="JobCardParent">
         {apiData.map((job, id) => {
           return <JobCard key={job.jdUid} job={job} />;
         })}
-      </ul>
+      </div>
     </div>
   );
 };

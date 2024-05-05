@@ -1,4 +1,5 @@
 import React from "react";
+import "./JobCard.css";
 
 const JobCard = ({ job }) => {
   const {
@@ -31,20 +32,21 @@ const JobCard = ({ job }) => {
       </div>
 
       <p className="SalaryRange">
-      {salaryCurrencyCode ||"₹" }   {minJdSalary || "0"} - {maxJdSalary} LPA ✅
+        {salaryCurrencyCode || "₹"} {minJdSalary || "0"} - {maxJdSalary} LPA ✅
       </p>
 
       <div className="AboutCompany">
         <span>About Company:</span>
         <p className="AboutHeading">About Us</p>
-        <p className="AboutParagraph">{jobDetailsFromCompany}
+        <p className="AboutParagraph">
+          {jobDetailsFromCompany}
           <button className="ViewJobBtn">View Job</button>
         </p>
       </div>
 
       <div className="MinExperience">
         <h3 className="MinExpHeading">Minimum Experience</h3>
-        <p className="MinExp">{minExp}  years</p>
+        <p className="MinExp">{minExp} years</p>
       </div>
 
       <button className="EasyApplyButton">Easy Apply</button>

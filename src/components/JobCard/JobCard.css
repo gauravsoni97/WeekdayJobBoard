@@ -1,0 +1,15 @@
+.JobCardParent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.JobCard {
+  box-shadow: 0 0 5px rgba(128, 128, 128, 0.363);
+  padding: 1rem;
+  border-radius: 1rem;
+  transition: 0.3s ease-in-out;
+}
+.JobCard:hover {
+  transform: scale(1.01);
+}
