@@ -10,7 +10,9 @@ const CustomChip = (props) => {
     <Chip
       {...props}
       style={{ borderRadius: "4px" }}
-      deleteIcon={<CloseRoundedIcon style={{ color: "black" , fontSize:".8rem"}} />}
+      deleteIcon={
+        <CloseRoundedIcon style={{ color: "black", fontSize: ".8rem" }} />
+      }
     />
   );
 };
