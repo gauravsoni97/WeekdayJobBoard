@@ -6,10 +6,120 @@
 
 .JobCard {
   box-shadow: 0 0 5px rgba(128, 128, 128, 0.363);
-  padding: 1rem;
+  padding: 1.2rem 1.5rem;
   border-radius: 1rem;
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 .JobCard:hover {
   transform: scale(1.01);
+}
+
+.DayBadge{
+  box-shadow: 0 0 5px rgba(128, 128, 128, 0.363);
+  padding: .5rem;
+  border-radius: 50px;
+  font-size: .7rem;
+}
+
+.CompanyDetails{
+  margin-top: 1.8rem;
+}
+
+
+.CompanyImage img{
+  width: 60px;
+  height: 100%;
+}
+
+
+.CompanyDetails {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+
+
+
+.CompanyName{
+  font-size: 1rem;
+  color: gray;
+  font-weight: 600;
+}
+
+.JobRole{
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin: .3rem 0;
+  text-transform: capitalize;
+}
+
+.CompanyLocation{
+  font-size: .8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+
+}
+
+
+.SalaryRange{
+  margin: .5rem 0;
+  color: #6F616A;
+  font-weight: bold;
+}
+
+.AboutHeading{
+  font-weight: 600;
+}
+
+.AboutParagraph{
+  color: #878787;
+  margin: .4rem 0;
+  font-size: .95rem;
+}
+
+
+.ViewJobBtn{
+  background: rgb(255,255,255);
+background: linear-gradient(0deg, rgba(255,255,255,1) 62%, rgba(0,209,251,0) 100%);
+  color: rgb(25, 25, 185);
+width: 100%;
+display: block;
+position: relative;
+top: -1rem;
+padding-top: 1.5rem;
+outline: none;
+border: none;
+cursor: pointer;
+font-size: 1rem;
+font-family: inherit;
+}
+
+.MinExpHeading{
+color: #878787;
+letter-spacing: 1px;
+font-weight: 500;
+}
+
+.jobCardBtns{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: .5rem;
+  margin-top: .7rem;
+}
+
+.jobCardBtn{
+  outline: none;
+  border: none;
+  padding: .7rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: inherit;
+}
+
+
+.EasyApplyButton{
+  background-color: #55EFC4;
 }

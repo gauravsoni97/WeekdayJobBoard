@@ -19,12 +19,12 @@ const JobCard = ({ job }) => {
 
   return (
     <div className="JobCard" key={jdUid}>
-      <div className="DayBadge"></div>
+      <span className="DayBadge"> ⏳ Posted 10 days ago</span>
       <div className="CompanyDetails">
         <div className="CompanyImage">
           <img src={logoUrl} alt="" />
         </div>
-        <div className="CompanyNameRolePlace">
+        <div>
           <h1 className="CompanyName">{companyName}</h1>
           <h2 className="JobRole">{jobRole}</h2>
           <p className="CompanyLocation">{location}</p>
@@ -32,26 +32,26 @@ const JobCard = ({ job }) => {
       </div>
 
       <p className="SalaryRange">
-        {salaryCurrencyCode || "₹"} {minJdSalary || "0"} - {maxJdSalary} LPA ✅
+        Estimated Salary: ₹ {minJdSalary || "0"} - {maxJdSalary} LPA ✅
       </p>
 
       <div className="AboutCompany">
-        <span>About Company:</span>
-        <p className="AboutHeading">About Us</p>
+        <p className="AboutHeading">About Company:</p>
+        <b>About Us</b>
         <p className="AboutParagraph">
-          {jobDetailsFromCompany}
+          {jobDetailsFromCompany.slice(0,370)}
           <button className="ViewJobBtn">View Job</button>
         </p>
       </div>
 
       <div className="MinExperience">
-        <h3 className="MinExpHeading">Minimum Experience</h3>
-        <p className="MinExp">{minExp} years</p>
+        <p className="MinExpHeading">Minimum Experience</p>
+        <p className="MinExp">{minExp || 0} {minExp === null ? "year" : "years" }</p>
       </div>
-
-      <button className="EasyApplyButton">Easy Apply</button>
-      <button className="UnlockReferralButton">Unlock referral asks</button>
+<div className="jobCardBtns">
+      <button className="EasyApplyButton jobCardBtn"> ⚡ Easy Apply</button>
     </div>
+</div>
   );
 };
 
