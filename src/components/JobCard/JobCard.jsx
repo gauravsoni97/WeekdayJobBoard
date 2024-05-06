@@ -39,19 +39,21 @@ const JobCard = ({ job }) => {
         <p className="AboutHeading">About Company:</p>
         <b>About Us</b>
         <p className="AboutParagraph">
-          {jobDetailsFromCompany.slice(0,370)}
+          {jobDetailsFromCompany.slice(0, 370)}
           <button className="ViewJobBtn">View Job</button>
         </p>
       </div>
 
       <div className="MinExperience">
         <p className="MinExpHeading">Minimum Experience</p>
-        <p className="MinExp">{minExp || 0} {minExp === null ? "year" : "years" }</p>
+        <p className="MinExp">
+          {minExp || 0} {minExp === null ? "year" : "years"}
+        </p>
       </div>
-<div className="jobCardBtns">
-      <button className="EasyApplyButton jobCardBtn"> ⚡ Easy Apply</button>
+      <div className="jobCardBtns">
+        <button className="EasyApplyButton jobCardBtn"> ⚡ Easy Apply</button>
+      </div>
     </div>
-</div>
   );
 };
 
