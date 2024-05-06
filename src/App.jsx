@@ -3,6 +3,7 @@ import JobCard from "./components/JobCard/JobCard";
 import { useApi } from "./context/ApiProvider";
 import "./components/JobCard/JobCard.css";
 import "./index.css"
+import Filter from "./components/Filter";
 
 const App = () => {
   const { apiData, loading, error } = useApi();
@@ -17,6 +18,9 @@ const App = () => {
 
   return (
     <div className="ProjectParent">
+
+      <Filter/>
+
       <h1>Job Details</h1>
       <div className="JobCardParent">
         {apiData.map((job, id) => {

@@ -33,7 +33,7 @@ const ApiProvider = ({ children }) => {
       }
 
       const data = await response.json();
-      setApiData(data?.jdList || []); // Provide default value if data.jdList is null or undefined
+      setApiData(data?.jdList || []);
       setLoading(false);
     } catch (error) {
       setError(error.message);
