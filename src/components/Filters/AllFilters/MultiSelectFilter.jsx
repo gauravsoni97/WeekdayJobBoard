@@ -17,7 +17,7 @@ const CustomChip = (props) => {
   );
 };
 
-export default function Filter() {
+export default function MultiSelectFilter() {
   return (
     <Stack spacing={3} sx={{ width: 500 }}>
       <Autocomplete
@@ -30,7 +30,7 @@ export default function Filter() {
         renderInput={(params) => (
           <TextField
             {...params}
-            label="filterSelectedOptions"
+            // label="filterSelectedOptions"
             placeholder="Favorites"
           />
         )}

@@ -3,7 +3,7 @@ import JobCard from "./components/JobCard/JobCard";
 import { useApi } from "./context/ApiProvider";
 import "./components/JobCard/JobCard.css";
 import "./index.css"
-import Filter from "./components/Filter";
+import Filter from "./components/Filters/Filter";
 
 const App = () => {
   const { apiData, loading, error } = useApi();
