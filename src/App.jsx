@@ -35,10 +35,10 @@ const App = () => {
             (filters.roles.length === 0 ||
               filters.roles.includes(job.jobRole)) &&
             // Check if experience matches
-            (filters.experience === null || parseInt(job.minExp) === filters.experience) &&
+            (filters.experience === null || job.minExp === parseInt(filters.experience)) &&
             // Check if minBasePay matches
-            (filters.minBasePay.value === null ||
-              job.minJdSalary >= parseInt(filters.minBasePay.value)) &&
+            (filters.minBasePay === null ||
+              job.minJdSalary >= parseInt(filters?.minBasePay?.value)) &&
             // Check if companyName matches
             (filters.companyName === null ||
               job.companyName === filters.companyName)
