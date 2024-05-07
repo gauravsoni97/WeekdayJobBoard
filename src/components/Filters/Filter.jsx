@@ -24,6 +24,9 @@ const Filter = ({ filters, setFilters }) => {
   const companyNameOption = Array.from(
     new Set(apiData.map((data) => data.companyName))
   );
+  const locationOption = Array.from(
+    new Set(apiData.map((data) => data.location))
+  );
 
   const handleAutocompleteChange = (filterKey, value) => {
     setFilters((prevFilters) => ({
@@ -95,6 +98,18 @@ const Filter = ({ filters, setFilters }) => {
         }
         renderInput={(params) => (
           <TextField {...params} placeholder="Company Name" />
+        )}
+      />
+      <Autocomplete
+        sx={{ width: 180 }}
+        id="Filter-companyName"
+        options={locationOption}
+        value={filters.location}
+        onChange={(e, newValue) =>
+          handleAutocompleteChange("location", newValue)
+        }
+        renderInput={(params) => (
+          <TextField {...params} placeholder="Location" />
         )}
       />
     </div>

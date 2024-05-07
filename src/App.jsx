@@ -20,12 +20,14 @@ const App = () => {
     experience: null,
     minBasePay: null,
     companyName: null,
+    location: null,
   });
 
   const filteredData =
     filters.roles.length === 0 &&
     filters.experience === null &&
     filters.minBasePay === null &&
+    filters.location === null &&
     filters.companyName === null
       ? apiData
       : apiData.filter((job) => {
@@ -42,7 +44,8 @@ const App = () => {
               job.minJdSalary >= parseInt(filters?.minBasePay?.value)) &&
             // Check if companyName matches
             (filters.companyName === null ||
-              job.companyName === filters.companyName)
+              job.companyName === filters.companyName) &&
+            (filters.location === null || job.location === filters.location)
           );
         });
 
