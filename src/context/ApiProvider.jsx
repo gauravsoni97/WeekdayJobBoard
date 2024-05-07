@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect, useContext, useRef } from "react";
+import React, { createContext, useState, useEffect, useContext } from "react";
 
 const ApiContext = createContext();
 
@@ -9,7 +9,6 @@ const ApiProvider = ({ children }) => {
   const [filters, setFilters] = useState({}); // State to hold filters
   const [offset, setOffset] = useState(0); // State to keep track of offset
   const [hasMore, setHasMore] = useState(true); // State to check if there is more data to fetch
-  const loader = useRef(null);
 
   const fetchData = async () => {
     try {
@@ -46,35 +45,28 @@ const ApiProvider = ({ children }) => {
     }
   };
 
-  const handleObserver = (entities) => {
-    const target = entities[0];
-    if (target.isIntersecting && hasMore) {
-      setOffset(prevOffset => prevOffset + 10); // Increase offset when loader is visible
+  const handleScroll = () => {
+    if (
+      window.innerHeight + document.documentElement.scrollTop !==
+      document.documentElement.offsetHeight
+    ) {
+      return;
+    }
+    if (hasMore) {
+      setOffset(prevOffset => prevOffset + 10);
     }
   };
 
   useEffect(() => {
-    const options = {
-      root: null,
-      rootMargin: "20px",
-      threshold: 1.0
-    };
-
-    const observer = new IntersectionObserver(handleObserver, options);
-    if (loader.current) {
-      observer.observe(loader.current);
-    }
-
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      if (loader.current) {
-        observer.unobserve(loader.current);
-      }
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [hasMore]);
 
   useEffect(() => {
     fetchData();
-  }, [offset]); 
+  }, [offset]); // Fetch data whenever offset changes
 
   // Function to handle filtering
   const handleFilter = (filters) => {
