@@ -45,11 +45,15 @@ The responsive platform works well on different screen sizes, including mobile d
    ```bash
    git clone [<repository_url>](https://github.com/gauravsoni97/WeekdayJobBoard.git)
 
-2. Install dependencies:
+2. **Change Directory and go inside that folder:**
+   ```bash
+   cd WeekdayJobBoard
+ 
+4. Install dependencies:
     ```bash
    npm install
 
-3. Run the application:
+5. Run the application:
     ```bash
    npm run dev
 
