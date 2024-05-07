@@ -74,7 +74,7 @@ const ApiProvider = ({ children }) => {
 
   useEffect(() => {
     fetchData();
-  }, [offset]); // Fetch data whenever offset changes
+  }, [offset]); 
 
   // Function to handle filtering
   const handleFilter = (filters) => {
@@ -88,9 +88,6 @@ const ApiProvider = ({ children }) => {
   return (
     <ApiContext.Provider value={{ apiData, loading, error, handleFilter }}>
       {children}
-      <div ref={loader} style={{ margin: "10px", textAlign: "center" }}>
-        {loading && <p>Loading...</p>}
-      </div>
     </ApiContext.Provider>
   );
 };
