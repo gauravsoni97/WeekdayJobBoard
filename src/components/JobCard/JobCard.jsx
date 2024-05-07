@@ -50,9 +50,11 @@ const JobCard = ({ job }) => {
           {minExp || 0} {minExp === null ? "year" : "years"}
         </p>
       </div>
+        <a href={jdLink} >
       <div className="jobCardBtns">
-        <button className="EasyApplyButton jobCardBtn"> ⚡ Easy Apply</button>
+          <button className="EasyApplyButton jobCardBtn"> ⚡ Easy Apply</button>
       </div>
+        </a>
     </div>
   );
 };

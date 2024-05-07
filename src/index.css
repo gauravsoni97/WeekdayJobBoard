@@ -8,7 +8,9 @@
 body {
   font-family: "Nunito", sans-serif;
 }
-
+a{
+  text-decoration: none;
+}
 .ProjectParent {
   max-width: 90vw;
   margin: 2rem auto;
