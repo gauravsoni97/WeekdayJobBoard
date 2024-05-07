@@ -45,7 +45,6 @@ const App = () => {
           );
         });
 
-  console.log(filters, "filters");
   return (
     <div className="ProjectParent">
       <Filter filters={filters} setFilters={setFilters} />
