@@ -35,7 +35,8 @@ const App = () => {
             (filters.roles.length === 0 ||
               filters.roles.includes(job.jobRole)) &&
             // Check if experience matches
-            (filters.experience === null || job.minExp === parseInt(filters.experience)) &&
+            (filters.experience === null ||
+              job.minExp === parseInt(filters.experience)) &&
             // Check if minBasePay matches
             (filters.minBasePay === null ||
               job.minJdSalary >= parseInt(filters?.minBasePay?.value)) &&
