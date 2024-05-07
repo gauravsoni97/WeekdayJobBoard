@@ -49,11 +49,11 @@ The responsive platform works well on different screen sizes, including mobile d
    ```bash
    cd WeekdayJobBoard
  
-3. Install dependencies:
+4. Install dependencies:
     ```bash
    npm install
 
-4. Run the application:
+5. Run the application:
     ```bash
    npm run dev
 
